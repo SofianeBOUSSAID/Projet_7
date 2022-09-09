@@ -1,0 +1,7 @@
+.containers-home {
+  width: 60%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

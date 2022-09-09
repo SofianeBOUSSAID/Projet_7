@@ -1,0 +1,35 @@
+.logout {
+    margin: 0 10px;
+    font-size: 16px;
+    
+  
+    font-weight: bold;
+    text-decoration: none;
+    justify-items: center;
+    color: #FFD7D7;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+.logout p {
+    margin: 10px;
+}
+.logout p:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+.logout-icon {
+    display: none;
+    width: 25px;
+    height: 20px;
+    color: #FFD7D7;
+}
+
+@media(max-width: 380px) {
+    .logout-icon{
+        display: flex;
+    }
+    .logout-text {
+        display: none;
+    }
+}

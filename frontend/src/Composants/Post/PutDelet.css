@@ -1,0 +1,66 @@
+.box-put {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    top: -35px;
+    font-size: 1.5vh;
+}
+.box-put p {
+    background-color: #4E5166;
+    border-radius: 0px 0px 15px 15px;
+    margin-left: 5px;
+    padding: 5px;
+    font-family: 'Lato';
+    width: 20px;
+   position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}.supprimer {
+    color: white;
+}
+.supprimer:hover {
+    background-color: red;
+}
+
+.box-put p:hover  {
+  cursor: pointer;
+  filter: brightness(1.2);
+}
+
+@media(max-width: 360px){
+    .box-put p {
+        background-color: #4E5166;
+        margin-left: 0px;
+    }
+ 
+  }
+.modif-input  {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    resize: none;
+    font-size: 1.5vh;
+    font-weight: bolder;
+}
+.modifier-btn {
+    position: absolute;
+    border: none;
+    background-color: #4E5166;
+    top: 100%;
+    margin-top: 10px;
+    border-radius:15px 0px  0px 15px ;
+    
+}
+.fas.fa-arrow-right  {
+    color: white;
+    background-color: #4E5166;
+    font-size: 13px;
+}.modifier-btn:hover {
+cursor: pointer;
+filter: brightness(1.1);
+}
+
+/* *********************************** */
+
+
