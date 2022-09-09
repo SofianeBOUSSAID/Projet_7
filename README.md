@@ -15,6 +15,6 @@ cd frontend
 `npm i`
 npm start
 
-Le back-end doit fonctionner sur le port 3000 et le front devrait automatiquement trouver sont port. 
+Le back-end doit fonctionner sur le port 5000 et le front doit fonctionner sur le port 3000. 
 
 
