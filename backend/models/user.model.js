@@ -34,13 +34,6 @@ const userSchema = new mongoose.Schema(
         picture: {
             type: String,
             default: "https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_1280.png"
-        },
-        bio: {
-            type: String,
-            maxlength: 1024,
-        },
-        likes: {
-            type: [String]
         }
     },
     {
@@ -63,7 +56,7 @@ userSchema.statics.login = async function (email, password) {
         }
         throw Error('incorrect password');
     }
-    throw Error('incorrect email')
+    throw Error('incorrect email');
 };
 
 const UserModel = mongoose.model('user', userSchema);

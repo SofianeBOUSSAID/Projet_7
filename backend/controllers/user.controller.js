@@ -7,7 +7,7 @@ module.exports.getAllUsers = async (req, res) => {
 };
 
 module.exports.userInfo = (req, res) => {
-    console.log(req.params);
+
     if (!ObjectID.isValid(req.params.id)) {
         return res.status(400).send('ID UNKNOW ' + req.params.id)
     }
@@ -22,7 +22,10 @@ module.exports.updateUser = (req, res) => {
     UserModel.findOneAndUpdate(
         { _id: req.params.id },
         {
-            $set: { ...req.body },
+            $set: {
+                ...req.body,
+                picture: req.file ? `${req.protocol}://${req.get("host")}/images/${req.file.filename}` : "",
+            },
         },
         {
             new: true,
@@ -36,13 +39,13 @@ module.exports.updateUser = (req, res) => {
 };
 
 module.exports.deleteUser = async (req, res) => {
-    if(!ObjectID.isValid(req.params.id))
-    return res.status(400).send('ID unknow :' + req.params.id)
+    if (!ObjectID.isValid(req.params.id))
+        return res.status(400).send('ID unknow :' + req.params.id)
 
-    try{
+    try {
         await UserModel.remove({ _id: req.params.id }).exec();
-        res.status(200).json({ message: "User deleted. "});
-    } catch(err){
-        return res.status(500).json({ message: err});
+        res.status(200).json({ message: "User deleted. " });
+    } catch (err) {
+        return res.status(500).json({ message: err });
     }
 }

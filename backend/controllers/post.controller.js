@@ -14,7 +14,7 @@ module.exports.createPost = async (req, res) => {
     const newPost = new postModel({
         posterId: req.body.posterId,
         message: req.body.message,
-        picture: req.file ? `${req.protocol}://${req.get("host")}/images/${req.file.filename}`:"",
+        picture: req.file ? `${req.protocol}://${req.get("host")}/images/${req.file.filename}` : "",
         video: req.body.video,
         likers: [],
         comments: []
@@ -74,7 +74,7 @@ module.exports.likePost = async (req, res) => {
     if (!ObjectId.isValid(req.params.id)) {
         return res.status(400).send('ID UNKNOW ' + req.params.id);
     }
-
+    console.log(req.body);
 
     await postModel.findOneAndUpdate(
         { _id: req.params.id },
