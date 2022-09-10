@@ -30,7 +30,7 @@ export default function InfoSupp(props) {
       withCredentials: true,
     })
       .then(() => {
-        setToggle(false)
+        setToggle(false);
       })
       .catch((err) => alert(err.response.data.message));
   };
@@ -38,7 +38,7 @@ export default function InfoSupp(props) {
     <div>
       <div className="container-info-supp">
         <p className="date">{props.dateFr}</p>
-        {<p>{props.post.likers.length}</p>}
+        {<p className="likeNbr" >{props.post.likers.length}</p>}
         <div onClick={toggle ? fetchUnlike : fetchLike} className={"heartDeux"}>
           <i
             className={

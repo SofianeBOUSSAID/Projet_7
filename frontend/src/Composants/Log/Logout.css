@@ -6,7 +6,7 @@
     font-weight: bold;
     text-decoration: none;
     justify-items: center;
-    color: #FFD7D7;
+    color: white;
     align-items: center;
     display: flex;
     justify-content: flex-end;
@@ -22,7 +22,7 @@
     display: none;
     width: 25px;
     height: 20px;
-    color: #FFD7D7;
+    color: white;
 }
 
 @media(max-width: 380px) {

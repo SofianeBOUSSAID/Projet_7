@@ -6,7 +6,8 @@
     font-size: 1.5vh;
 }
 .box-put p {
-    background-color: #4E5166;
+    background: linear-gradient(to right bottom, #FD2D01, #FFD7D7);
+    border: solid 0.5px rgb(218, 218, 218);
     border-radius: 0px 0px 15px 15px;
     margin-left: 5px;
     padding: 5px;

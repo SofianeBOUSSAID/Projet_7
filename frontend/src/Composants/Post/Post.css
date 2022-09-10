@@ -49,8 +49,8 @@ border-radius: 15px 0px 0px 15px;
     width: 100%;
     max-width: 1100px;
     /* border: solid 2px #4E5166; */
-    box-shadow: 0px 0px 2px  #4E5166;
-    border-radius: 3px;
+    box-shadow: inset 0px 0px 3px 0px #4e5166;
+    border-radius: 5px;
     margin-bottom: 10px;
     overflow: hidden;
     word-wrap: break-word;
@@ -175,7 +175,7 @@ transform:  scale(1.02);
 .fas.fa-heart
 {
     color:transparent;
-    background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+    background: linear-gradient(to right bottom, #FD2D01, #FFD7D7);
     background-clip: text;
     -webkit-background-clip: text;
     transition-duration: 1s;

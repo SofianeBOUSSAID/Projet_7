@@ -19,7 +19,8 @@ export default function Post() {
     await axios
       .get("http://localhost:5000/api/post/", { withCredentials: true })
       .then((res) => {
-        console.log(res);
+        res.data.reverse();
+        console.log(res.data);
         setData(res.data);
       })
       .then(() => setToggle(false))
